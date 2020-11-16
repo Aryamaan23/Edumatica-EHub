@@ -12,6 +12,7 @@ Edumatica was created by and is maintained by **[Team Prometheus]
 
 ## Snapshots 
 
+<img src="Edumatica1.png" height="300px">
 
 ## Copyright and License
 
