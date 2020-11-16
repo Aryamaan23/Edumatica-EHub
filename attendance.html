@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Edumatica EHub</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
+  <!--###################################################################### -->
+  <style>
+    #card-body-demo {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+<!--###################################################################### -->
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Edumatica EHub</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="attendance.html">AI Attendance
+                <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Book Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location Tracker</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">AI Attendance</h1>
+      <p class="lead">When it comes to the possibilities and possible perils of artificial intelligence (AI), learning and reasoning by machines without the intervention of humans, there are lots of opinions out there. But we bring you what is most important during these times.</p>
+      <!-- <a href="#" class="btn btn-primary btn-lg">Upload a Video</a> -->
+      <input type="file" id="imageUpload">
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-12 col-md-12 mb-12">
+        <div class="card h-100">
+          <!-- <img class="card-img-top" src="http://placehold.it/500x325" alt=""> -->
+          <div class="card-body">
+            <h4 class="card-title">How it Works</h4>
+            <p class="card-text"><img height= "18%" width="18%" src="images/arrows.svg" alt=""><br>The efficient use of our AI based Attendance Application is quite convenient and User friendly. Generally it works on the principle of Face Recognition Techniques to identify the Faces from an input Image and categories it on the basis of the Trained Data. The User is just supposed to upload an Image of himself/herself for being verified and marked for their Attendance during the Check Ins.<br><br><img height= "18%" width="18%" src="images/Brain.svg" alt=""><br><br> 
+              Manual attendance is tedious and Time-consuming.
+              Teachers spend their precious teaching time in administrative tasks.
+              It is inherently vulnerable to proxies and manual errors.
+              To solve these problems we designed an AI attendance system, which uses Computer Vision and Machine Learning algorithms to mark the attendance of the employees or students of the organisation.</p>
+          </div>
+          <div class="card-footer">
+            <!-- <a href="#" class="btn btn-primary">Find Out More!</a> -->
+          </div>
+        </div>
+      </div>
+      <div id="card-body-demo" style="border: solid 1px black;"></div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Team Prometheus 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+
+</html>

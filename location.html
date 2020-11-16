@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocating the User</title>
+    <style type="text/css">
+        .container {
+            margin-top: 50px;
+        }
+  
+      </style>
+       <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">">
+      
+</head>
+<body>
+
+    <div class="container">
+        <div class="row-justify-content-center">
+            <div class="col -md-8 col-md-offset-2" align="center">
+                <h1>Geolocation User Tracking</h1>
+                <div style="text-align: left ; margin-top: 30 px;" >
+                    <b>Latitude: </b><span id="latitude"></span><br>
+                    <b>Longitude: </b><span id="longitude"></span><br>
+                    <!--<b>Country: </b><span id="country"></span><br>
+                    <b>City: </b><span id="city"></span><br>
+                    <b>Continent: </b><span id="continent"></span><br>-->
+
+                </div>
+                <div id="map">
+                    <iframe
+                    width="50"
+                    height="400"
+                    frameborder="0" style="border:0 ; width: 100%;"
+                    src="" allowfullscreen>
+</iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Team Prometheus 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            
+            if ("geolocation" in navigator){
+                navigator.geolocation.getCurrentPosition(function (p){
+                    showUserDetails(p.coords.latitude,p.coords.longitude);
+            },function (e) 
+            {
+                ipLookup();
+                
+            });
+
+        }
+        else
+            ipLookup();
+        
+            
+
+
+        });
+
+        function showUserDetails(latitude,longitude,additional) {
+
+            
+            var position=latitude + "," + longitude;
+
+            $("#latitude").text(latitude);
+            $("#longitude").text(longitude);
+        
+
+                    
+            var url= src="https://www.google.com/maps/embed/v1/view?center="+position+"&zoom=12&key=AIzaSyBX8HecvnTcDWose27PYN9Yd-UGlaCZ6uw";
+            $("iframe").attr('src',url);
+
+            if (typeof additional != "undefined"){
+                $('#country').text(additional.country.name)
+                $('#city').text(additional.city.name)
+                $('#continent').text(additional.continent.name)
+
+            }
+
+            
+        }
+        
+        function ipLookup(){
+            $.get('https://api.userinfo.io/userinfos',function(r) {
+                showUserDetails(r.position.latitude,r.position.longitude,r);
+                
+
+            });
+
+        }
+    </script>
+
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
