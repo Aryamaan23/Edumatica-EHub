@@ -1,4 +1,4 @@
-# [Edumatica EHub]
+# Edumatica EHub [DefHack 2020]
 
 ## Preview
 
