@@ -7,7 +7,7 @@
 
 ## About
 
-Edumatica was created by and is maintained by **[Team Prometheus]
+### Edumatica was created by and is maintained by **[Team Prometheus]
 .
 
 ## Snapshots 
@@ -16,7 +16,7 @@ Edumatica was created by and is maintained by **[Team Prometheus]
 
 ## Copyright and License
 
-Copyright 2020 Team Prometheus
+### Copyright 2020 Team Prometheus
 
 ## Prometheus Team Members:
 ### 1.Aryamaan Pandey
