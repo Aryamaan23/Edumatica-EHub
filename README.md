@@ -1,5 +1,7 @@
 # Edumatica EHub [DefHack 2020]
 
+[Edumatica](edumatica.netlify.app/)
+
 ## Preview
 
 **[View Live Preview](https://edumatica.netlify.app/)**
