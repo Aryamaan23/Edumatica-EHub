@@ -23,5 +23,3 @@
 ## Prometheus Team Members:
 ### 1.Aryamaan Pandey
 ### 2.Akshad Kolhatkar
-### 3.Ayush Sahay
-### 4.Harsh Mishra
